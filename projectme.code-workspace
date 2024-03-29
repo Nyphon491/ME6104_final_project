@@ -4,5 +4,19 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"launch": {
+		"configurations": [
+			{
+				"name": "debug cad_project",
+				"type": "debugpy",
+				"request": "launch",
+				"program": "${workspaceFolder}/main.py",
+				"justMyCode": true,
+			}
+		],
+	},
+	"settings": {
+		// The default terminal must be CMD for the debugger to grab the correct conda venv
+		"terminal.integrated.defaultProfile.windows": "Command Prompt"
+	}
 }
