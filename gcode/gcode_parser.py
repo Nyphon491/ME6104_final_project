@@ -11,7 +11,7 @@ def load(file):
                 z = line[3][1:]
             if line[0] == 'G1' and line[-1][:2] == 'E.':
                 coords.append([line[1][1:], line[2][1:], z])
-    return np.array(coords).astype(np.float16)
+    return np.array(coords).astype(np.float32)
 
 def slice_sep(coords):
     slices = []
