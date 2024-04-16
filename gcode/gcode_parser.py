@@ -7,9 +7,12 @@ def load(file):
         z = '0'
         for line in lines:
             line = line.split(' ')
-            if len(line) > 4 and line[0] == 'G1' and line[3][0] == 'Z':
-                z = line[3][1:]
-            if line[0] == 'G1' and line[-1][:2] == 'E.':
+            for item in line:
+                if len(item) > 0 and item[0] == 'Z':
+                    z = item[1:]
+            # if len(line) > 4 and line[0] == 'G0' and line[4][0] == 'Z':
+            #     z = line[3][1:]
+            if line[0] == 'G1' and line[-1][:1] == 'E':
                 coords.append([line[1][1:], line[2][1:], z])
     return np.array(coords).astype(np.float32)
 
