@@ -8,8 +8,7 @@ Conventionally AM machines work by cartesian coordinate movements with each axis
 
 # To do
 
-* [ ] make slice-wise curves a single composite curve
-  * [ ] both bezier and line segments
-  * [ ] extract shifted locations from original points
-* [ ] measure error of new slice to old slice
+* [x] measure error of new slice to old slice
 * [ ] sweep over `n` and `a` to find *acceptable* (diminishing returns) new slice
+* [ ] estimate time for new slice
+* [ ] write gcode changes back to file
